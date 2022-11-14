@@ -1,0 +1,28 @@
+{
+  "playerData": [
+    {
+      "id": 1,
+      "name": "Cristiano Ronaldo",
+      "imageUrl": "https://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/A6E4/production/_127542724_gettyimages-1228407694.jpg",
+      "position": "Attacker",
+      "age": "37",
+      "nationality": "Portuguese"
+    },
+    {
+      "id": 2,
+      "name": "Thierry Henry",
+      "imageUrl": "https://i2-prod.mirror.co.uk/incoming/article21858710.ece/ALTERNATES/s1200/0_Arsenals-Thierry-Henry-celebrates-another-goal-at-Highbury-in-London.jpg",
+      "position": "Attacker",
+      "age": "45",
+      "nationality": "French"
+    },
+    {
+      "id": 3,
+      "name": "Lionel Messi",
+      "imageUrl": "https://static01.nyt.com/images/2019/04/16/sports/16onsoccerweb-2/merlin_153612873_5bb119b9-8972-4087-b4fd-371cab8c5ba2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+      "position": "Attacker",
+      "age": "35",
+      "nationality": "Argentinian"
+    }
+  ]
+}
