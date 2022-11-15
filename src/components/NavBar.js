@@ -10,13 +10,17 @@ const linkStyles = {
   textDecoration: "none",
   color: "white",
   borderRadius: "8px",
+  fontFamily: "Arial, Helvetica, sans-serif",
+  textAlign: "center",
+  marginLeft: "50px",
+  marginRight: "50px",
 };
 
 function NavBar() {
   return (
-    <div>
+    <div className="navBar">
       <NavLink
-        to="/Home"
+        to="/"
         exact
         style={linkStyles}
         activeStyle={{

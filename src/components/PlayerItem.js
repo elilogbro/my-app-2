@@ -3,10 +3,10 @@ import React from "react";
 function PlayerItem({ player }) {
   return (
     <div>
-      <div className="card-img">
+      <div className="cardimg">
         <img src={player.imageUrl} alt="player" />
       </div>
-      <div className="playerInfo">
+      <div className="viewplayers">
         <h1>Name: {player.name}</h1>
         <ul>
           <li>Age: {player.age}</li>

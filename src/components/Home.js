@@ -2,8 +2,8 @@ import React from "react";
 
 function Home() {
   return (
-    <div className="allText">
-      <h1>Welcome, to the GOAT index</h1>
+    <div className="homepage">
+      <h1>Welcome, to the GOAT index.</h1>
       <hr></hr>
       <p>
         An index for the greatest players to play the game.

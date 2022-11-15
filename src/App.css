@@ -1,20 +1,17 @@
-.allText {
+.viewplayers {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.loading,
+.form,
+.database,
+.search,
+.addplayer,
+.homepage {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.playerInfo {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.database {
-  text-align: center;
-}
-
-.loading {
-  text-align: center;
-}
-
-.form {
+.navBar {
   text-align: center;
 }

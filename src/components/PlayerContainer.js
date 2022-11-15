@@ -21,7 +21,7 @@ function PlayerContainer() {
   ) : (
     <React.Fragment>
       <div className="database allText">
-        <h1>Database</h1>
+        <h1>GOAT index.</h1>
         <hr></hr>
         <p>
           Below you will find an array of the greatest players to ever grace a

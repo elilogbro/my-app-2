@@ -4,6 +4,7 @@ import Home from "./Home";
 import PlayerContainer from "./PlayerContainer";
 import NavBar from "./NavBar";
 import AddPlayer from "./AddPlayer";
+import Search from "./Search";
 
 function App() {
   return (
@@ -16,8 +17,10 @@ function App() {
         <Route path="/Add">
           <AddPlayer />
         </Route>
-        <Route path="/Search"></Route>
-        <Route path="/">
+        <Route path="/Search">
+          <Search />
+        </Route>
+        <Route exact path="/">
           <Home />
         </Route>
       </Switch>
