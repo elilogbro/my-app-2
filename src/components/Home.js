@@ -1,7 +1,18 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 function Home() {
-  return (
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+  });
+
+  return loading ? (
+    <div className="loading">
+      <h1>Loading...</h1>
+    </div>
+  ) : (
     <div className="homepage">
       <h1>Welcome, to the GOAT index.</h1>
       <hr></hr>
