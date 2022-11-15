@@ -2,7 +2,7 @@ import React from "react";
 
 function Home() {
   return (
-    <div>
+    <div className="center">
       <h1>Welcome, to the GOAT index</h1>
       <p>
         An index for the greatest players to play the game. Search through an

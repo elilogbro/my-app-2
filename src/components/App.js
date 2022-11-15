@@ -1,30 +1,28 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import "../App.css";
 import Home from "./Home";
-import playerContainer from "./PlayerContainer";
+import PlayerContainer from "./PlayerContainer";
 
 function App() {
-  const [player, setPlayer] = useState([]);
+  const [players, setPlayers] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3001/playerData")
+    fetch(`http://localhost:3001/playerData`)
       .then((response) => response.json())
       .then((data) => {
-        {
-          data;
-        }
+        setPlayers(data);
+        setLoading(false);
       });
-  });
+  }, []);
 
   return (
-    <div className="App">
+    <div className="container">
       <Switch>
         <Route>
           <Home />
-          <PlayerContainer loading={loading} />
+          <PlayerContainer loading={loading} players={players} />
         </Route>
       </Switch>
     </div>
