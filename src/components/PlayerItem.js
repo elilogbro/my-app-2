@@ -1,18 +1,18 @@
 import React from "react";
 
+function showDetails() {}
+
 function PlayerItem({ player }) {
   return (
     <div>
-      <div className="cardimg">
+      <div className="carding">
         <img src={player.imageUrl} alt="player" />
-      </div>
-      <div className="viewplayers">
-        <h1>Name: {player.name}</h1>
-        <ul>
-          <li>Age: {player.age}</li>
-          <li>Nationality: {player.nationality}</li>
-          <li>Position: {player.position}</li>
-        </ul>
+        <div onClick={showDetails}>
+          <h3>{player.name}</h3>
+          <p>Age: {player.age}</p>
+          <p>Nationality: {player.nationality}</p>
+          <p>Position: {player.position}</p>
+        </div>
       </div>
     </div>
   );
