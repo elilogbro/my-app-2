@@ -13,6 +13,7 @@ function Home() {
         via the add player, or search for specific players in our search
         section.
       </p>
+      <img src="goat.jpg" />
     </div>
   );
 }
