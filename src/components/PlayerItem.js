@@ -6,12 +6,14 @@ function PlayerItem({ player }) {
       <div className="card-img">
         <img src={player.imageUrl} alt="player" />
       </div>
-      <h1>Name: {player.name}</h1>
-      <ul>
-        <li>Age: {player.age}</li>
-        <li>Nationality: {player.nationality}</li>
-        <li>Position: {player.position}</li>
-      </ul>
+      <div className="playerInfo">
+        <h1>Name: {player.name}</h1>
+        <ul>
+          <li>Age: {player.age}</li>
+          <li>Nationality: {player.nationality}</li>
+          <li>Position: {player.position}</li>
+        </ul>
+      </div>
     </div>
   );
 }

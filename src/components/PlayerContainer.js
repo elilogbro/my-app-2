@@ -1,15 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PlayerItem from "./PlayerItem";
 
-function PlayerContainer({ players, loading }) {
+function PlayerContainer() {
+  const [players, setPlayers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`http://localhost:3001/playerData`)
+      .then((response) => response.json())
+      .then((data) => {
+        setPlayers(data);
+        setLoading(false);
+      });
+  }, []);
+
   return loading ? (
-    <h1>Loading...</h1>
+    <div className="loading">
+      <h1>Loading...</h1>
+    </div>
   ) : (
-    <section>
+    <React.Fragment>
+      <div className="database allText">
+        <h1>Database</h1>
+        <p>
+          Below you will find an array of the greatest players to ever grace a
+          Football pitch.
+        </p>
+      </div>
       {players.map((player) => (
         <PlayerItem key={player.id} player={player}></PlayerItem>
       ))}
-    </section>
+    </React.Fragment>
   );
 }
 
