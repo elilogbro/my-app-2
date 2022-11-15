@@ -55,6 +55,22 @@
       "age": "50",
       "nationality": "French",
       "id": 7
+    },
+    {
+      "name": "Zlatan Ibrahimović",
+      "imageUrl": "https://images2.minutemediacdn.com/image/upload/c_fill,w_912,h_516,f_auto,q_auto,g_auto/shape/cover/sport/5a392c1d39e96eff0d000001.jpg",
+      "position": "Forward",
+      "age": "41",
+      "nationality": "Swedish",
+      "id": 8
+    },
+    {
+      "name": "Neymar",
+      "imageUrl": "https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(jpeg):focal(1422x506:1424x504)/origin-imgresizer.eurosport.com/2022/10/16/3474160-70830368-2560-1440.jpg",
+      "position": "Forward",
+      "age": "30",
+      "nationality": "Brazilian",
+      "id": 9
     }
   ]
 }

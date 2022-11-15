@@ -15,3 +15,24 @@
 .navBar {
   text-align: center;
 }
+
+.carding img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.carding {
+  display: grid;
+  float: left;
+  margin: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
