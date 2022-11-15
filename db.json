@@ -39,6 +39,22 @@
       "position": "Goalkeeper",
       "age": "41",
       "nationality": "Spanish"
+    },
+    {
+      "name": "Cesc Fabregas",
+      "imageUrl": "https://cdn-wp.thesportsrush.com/2017/09/1664410-3x2-940x627.jpg",
+      "position": "Midfielder",
+      "age": "35",
+      "nationality": "Spanish",
+      "id": 6
+    },
+    {
+      "name": "Zidane",
+      "imageUrl": "https://www.realmadrid.com/img/horizontal_620px/9_zidane-gol-2-foto-buena_20210426060019.jpg",
+      "position": "Midfielder",
+      "age": "50",
+      "nationality": "French",
+      "id": 7
     }
   ]
 }
