@@ -39,26 +39,6 @@ function NavBar() {
       >
         View Index
       </NavLink>
-      <NavLink
-        to="/Add"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "#d4af37",
-        }}
-      >
-        Add Player
-      </NavLink>
-      <NavLink
-        to="/Search"
-        exact
-        style={linkStyles}
-        activeStyle={{
-          background: "#d4af37",
-        }}
-      >
-        Search Index
-      </NavLink>
     </div>
   );
 }

@@ -1,7 +1,18 @@
 import { useState } from "react";
 import React from "react";
+import { useHistory } from "react-router-dom";
+
+const linkStyles = {
+  padding: "6px",
+  margin: "0 6px 6px",
+  fontFamily: "Arial, Helvetica, sans-serif",
+  marginLeft: "30px",
+  marginRight: "30px",
+};
 
 function AddPlayer() {
+  const history = useHistory();
+
   const [newPlayer, setNewPlayer] = useState({
     name: "",
     age: "",
@@ -10,7 +21,6 @@ function AddPlayer() {
     imageUrl: "",
   });
 
-  //since the id values are the same as the keys in formData, we can write an abstract setFormData here
   function handleChange(event) {
     setNewPlayer({
       ...newPlayer,
@@ -34,19 +44,20 @@ function AddPlayer() {
       },
       body: JSON.stringify(xxx),
     });
+    history.push("/View");
   }
 
   return (
-    <React.Fragment>
+    <div>
       <div className="addplayer">
         <h1>Adding a player to our GOAT index.</h1>
         <hr></hr>
 
         <p>Follow the instructions in the form below.</p>
-        <p>Hit the enter button.</p>
+        <p>Hit the submit button.</p>
         <p>
-          Our app will automatically re direct you to the database so you can
-          see your changes.
+          Our app will automatically re direct you to the index so you can see
+          your changes.
         </p>
       </div>
       <br></br>
@@ -56,34 +67,41 @@ function AddPlayer() {
           name="name"
           onChange={handleChange}
           placeholder="Name..."
+          style={linkStyles}
         />
         <input
           type="text"
           name="imageUrl"
           onChange={handleChange}
           placeholder="Image URL here..."
+          style={linkStyles}
         />
         <input
           type="text"
           name="position"
           onChange={handleChange}
           placeholder="Position..."
+          style={linkStyles}
         />
         <input
           type="text"
           name="age"
           onChange={handleChange}
           placeholder="Age..."
+          style={linkStyles}
         />
         <input
           type="text"
           name="nationality"
           onChange={handleChange}
           placeholder="Nationality..."
+          style={linkStyles}
         />
-        <input type="submit" />
+        <br></br>
+        <br></br>
+        <input className="addPlayerButton" type="submit" style={linkStyles} />
       </form>
-    </React.Fragment>
+    </div>
   );
 }
 

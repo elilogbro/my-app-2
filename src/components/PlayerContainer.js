@@ -1,19 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PlayerItem from "./PlayerItem";
+import AddPlayerButton from "./AddPlayerButton";
 
-function PlayerContainer() {
-  const [players, setPlayers] = useState([]);
-  const [loading, setLoading] = useState(true);
+function PlayerContainer({ players, loading, getSearchInput }) {
+  const [search, setSearch] = useState("");
 
-  useEffect(() => {
-    fetch(`http://localhost:3001/playerData`)
-      .then((response) => response.json())
-      .then((data) => {
-        setPlayers(data);
-        setLoading(false);
-      });
-  }, []);
-
+  function onChange(e) {
+    setSearch(e);
+    getSearchInput(e);
+  }
   return loading ? (
     <div className="loading">
       <h1>Loading...</h1>
@@ -23,10 +18,21 @@ function PlayerContainer() {
       <div className="database allText">
         <h1>GOAT index.</h1>
         <hr></hr>
+        <form>
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => onChange(e.target.value)}
+            placeholder="Search player..."
+            autoFocus
+          />
+        </form>
         <p>
           Below you will find an array of the greatest players to ever grace a
           Football pitch.
         </p>
+        <br></br>
+        <AddPlayerButton />
       </div>
       {players.map((player) => (
         <PlayerItem key={player.id} player={player}></PlayerItem>
