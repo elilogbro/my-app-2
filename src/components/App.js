@@ -12,17 +12,19 @@ function App() {
   const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:3001/playerData`)
+    fetch(`http://localhost:3000/playerData`)
       .then((response) => response.json())
       .then((data) => {
         setPlayers(data);
-        setLoading(false);
-      });
-  }, [searchInput]);
+        setLoading(false)
+      })
+  }, []);
 
   function searchInputFunction(e) {
     setSearchInput(e);
   }
+
+  const filteredPlayers = players.filter(player => player.name.toLowerCase().includes(searchInput.toLowerCase()))
 
   return (
     <div>
@@ -31,12 +33,15 @@ function App() {
         <Route exact path="/View">
           <PlayerContainer
             loading={loading}
-            players={players}
+            players={filteredPlayers}
             getSearchInput={searchInputFunction}
           />
         </Route>
         <Route exact path="/View/AddPlayer">
-          <AddPlayer />
+          <AddPlayer
+            players={players}
+            setPlayers={setPlayers}
+          />
         </Route>
         <Route exact path="/">
           <Home />

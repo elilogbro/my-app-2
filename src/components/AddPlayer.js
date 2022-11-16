@@ -10,7 +10,7 @@ const linkStyles = {
   marginRight: "30px",
 };
 
-function AddPlayer() {
+function AddPlayer({players, setPlayers}) {
   const history = useHistory();
 
   const [newPlayer, setNewPlayer] = useState({
@@ -30,21 +30,30 @@ function AddPlayer() {
 
   function handleSubmit(event) {
     event.preventDefault();
+
     const xxx = {
       name: newPlayer.name,
       imageUrl: newPlayer.imageUrl,
       position: newPlayer.position,
       age: newPlayer.age,
       nationality: newPlayer.nationality,
-    };
-    fetch("http://localhost:3001/playerData", {
+    }
+
+    fetch("http://localhost:3000/playerData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(xxx),
-    });
-    history.push("/View");
+    })
+    .then(res => res.json())
+    .then(newPlayer => handleNewPlayer(newPlayer))
+
+    history.push("/View")
+  };
+
+  const handleNewPlayer = (newPlayer) => {
+    setPlayers([...players, newPlayer])
   }
 
   return (
@@ -99,7 +108,9 @@ function AddPlayer() {
         />
         <br></br>
         <br></br>
-        <input className="addPlayerButton" type="submit" style={linkStyles} />
+        <button className="addPlayerButton" type="submit" style={linkStyles}>
+          Submit
+        </button>
       </form>
     </div>
   );

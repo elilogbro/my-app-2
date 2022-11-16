@@ -6,7 +6,7 @@ function Home() {
 
   useEffect(() => {
     setLoading(false);
-  });
+  }, []);
 
   return loading ? (
     <div className="loading">
@@ -24,7 +24,7 @@ function Home() {
         via the add player, or search for specific players in our search
         section.
       </p>
-      <img src="goat.jpg" />
+      <img src="goat.jpg" alt="goat"/>
     </div>
   );
 }
