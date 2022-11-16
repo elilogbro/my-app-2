@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 function Search() {
   return (
     <div className="search">
@@ -11,6 +13,9 @@ function Search() {
         Search below using the name, age, nationality or position fields to find
         a tailor made player to your liking.
       </p>
+      <form>
+        <input type="text" placeholder="Search player" autoFocus />
+      </form>
     </div>
   );
 }
